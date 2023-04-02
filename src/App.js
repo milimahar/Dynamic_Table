@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DataModel from './DataModel';
+import Post from './Post';
+import Comments from './Comments';
+import Todos from './Todos';
+import Albums from './Albums';
+import { PendingTodos } from './PendingTodos';
+import { CompletedTodos } from './CompletedTodos';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<DataModel/>}/>
+        <Route path="/posts" element={< Post/>} />
+        <Route path="/comments" element={< Comments/>} />
+        <Route path="/todos" element={< Todos/>} />
+        <Route path="/albums" element={<Albums />} />
+        <Route path="/pendingtodos" element={<PendingTodos />} />
+        <Route path="/completedtodos" element={<CompletedTodos />} />
+          </Routes>
+    </BrowserRouter>
     </div>
   );
 }

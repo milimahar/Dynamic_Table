@@ -1,0 +1,22 @@
+table{
+    
+    width: 50px;
+    padding:20px ;
+    margin: 20px;
+   
+}
+th {
+    height: 70px;
+  }
+  td {
+    height: 50px;
+    vertical-align: bottom;
+    width: 50px;
+  }
+  th, td {
+    padding: 15px;
+    text-align: left;
+  }
+  div{
+    overflow-x: auto;
+  }
